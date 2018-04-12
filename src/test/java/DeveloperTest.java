@@ -15,18 +15,29 @@ public class DeveloperTest {
     }
 
     @Test
-    public void adminHasName() {
-        assertEquals("Mark", developer1.getName());
+    public void developerHasName() {
+        assertEquals("Sofia", developer1.getName());
     }
 
     @Test
-    public void adminHasNin() {
+    public void developerHasNin() {
         assertEquals("QQ123456C", developer1.getNin());
     }
 
     @Test
-    public void adminHasSalary() {
-        assertEquals(24000.0, developer1.getSalary(), 0.01);
+    public void developerHasSalary() {
+        assertEquals(26000.0, developer1.getSalary(), 0.01);
+    }
+
+    @Test
+    public void raiseSalary() {
+        developer1.raiseSalary(3);
+        assertEquals(26780.0, developer1.getSalary(), 0.01);
+    }
+
+    @Test
+    public void payBonus() {
+        assertEquals(260.0, developer1.payBonus(), 0.01);
     }
 
 }

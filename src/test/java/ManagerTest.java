@@ -43,4 +43,24 @@ public class ManagerTest {
     public void payBonus() {
         assertEquals(270.0, manager1.payBonus(), 0.01);
     }
+
+    @Test
+    public void raiseIncreaseCannotBeNegative() {
+        manager1.raiseSalary(-13.5);
+        assertEquals(27000.00, manager1.getSalary(), 0.01);
+    }
+
+    @Test
+    public void changeName() {
+        manager1.setName("Kasia");
+        assertEquals("Kasia", manager1.getName());
+    }
+
+    @Test
+    public void changedNameCannotBeEmpty() {
+        manager1.setName(null);
+        assertEquals("Ewa", manager1.getName());
+        manager1.setName("");
+        assertEquals("Ewa", manager1.getName());
+    }
 }

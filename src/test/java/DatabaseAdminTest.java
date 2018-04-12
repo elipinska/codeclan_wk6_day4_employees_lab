@@ -29,4 +29,15 @@ public class DatabaseAdminTest {
         assertEquals(24000.0, admin1.getSalary(), 0.01);
     }
 
+    @Test
+    public void raiseSalary() {
+        admin1.raiseSalary(3);
+        assertEquals(24720.0, admin1.getSalary(), 0.01);
+    }
+
+    @Test
+    public void payBonus() {
+        assertEquals(240.0, admin1.payBonus(), 0.01);
+    }
+
 }
